@@ -1,10 +1,14 @@
 {% extends "pms/layout.html" %}
 {% load static %}
 {% block body %}
-
-    <div>
-        Welcome to your PMS!
-        <p>Have a great day or night</p>
+    
+    <div class="firstDiv">
+        <h1 class="h1text">Welcome To Your PMS</h1>
+            <p class="niceText">Have a great day or night!</p>
+    </div>
+    <div class="secondDiv">
+            <button type="button" class="btn btn-outline-info"><a href="{% url 'login' %}">Login</a></button>
+            <button type="button" class="btn btn-outline-secondary"><a href="register">Register</a></button> 
     </div>
 
 {% endblock %}

@@ -34,3 +34,31 @@ ul {
   li:last-child{
     border-bottom: 1px solid #111;
   }
+  .firstDiv{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .h1text{
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .niceText{
+   
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .secondDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  button{ 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

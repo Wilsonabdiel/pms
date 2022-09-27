@@ -7,3 +7,7 @@ from django.db import models
 
 class User(AbstractUser):
     pass
+
+class Patient(models.Models):
+    fullname = models.CharField(max_length=100)
+    

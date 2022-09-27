@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# More generally,
+# AUTH_USER_MODEL = 'YourAppName.YourClassName'
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,3 +124,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = "pms.User"

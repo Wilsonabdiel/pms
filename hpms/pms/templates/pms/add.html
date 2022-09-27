@@ -1,0 +1,36 @@
+{% extends "pms/layout.html" %}
+{% load static %}
+{% block body %}
+    <h1>Add New Patient</h1>
+    <form action="{% url 'add' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input class="form-control" autofocus type="text" name="fullname" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="number" name="age" placeholder="Age">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="3" type="text" name="hedes" placeholder="Health status report from patient"></textarea>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="diagnosis" placeholder="Diagnosis">
+        </div>
+        
+        <div class="form-group">
+            <input class="form-control" type="text" name="reason" placeholder="Reason For Diagnosis">
+        </div>
+        {% comment %} <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+        </div> {% endcomment %}
+        <input class="btn btn-primary" type="submit" value="Register">
+    
+{% endblock %}
