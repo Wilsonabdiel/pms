@@ -19,7 +19,8 @@
         <p class="card-text">{{patient.diagnosis}}</p>
         <p class="card-text">{{patient.reason}}</p>
         <p class="card-text">{{patient.time}}</p>
-         {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
-        <a href="#" class="card-link">Edit</a> 
+         {% comment %} <a  href="delete/{{ patient.id }}" class="card-link">Delete</a> {% endcomment %}
+         
+         <a href="#" class="card-link">Edit</a> 
       </div>
 {% endblock %}

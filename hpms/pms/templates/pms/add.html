@@ -2,7 +2,7 @@
 {% load static %}
 {% block body %}
     <h1>Add New Patient</h1>
-    <form action="{% url 'add' %}" method="post">
+    <form action="{% url 'add' %}" class="form-group ghg" method="post">
         {% csrf_token %}
         <div class="form-group">
             <input class="form-control" autofocus type="text" name="name" placeholder="Full Name">

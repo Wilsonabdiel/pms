@@ -11,8 +11,10 @@
                     <h6 class="card-subtitle mb-2 text-muted">{{patient.fullname}}</h6>
                     <p class="card-text">{{patient.age}}</p>
                         <p class="card-text">{{patient.time}}</p>
-                    {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+                        
+                        {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
                     <button class="btn  btn-outline-primary"><a href="{% url 'all' id=patient.id %}" class="card-link">Details</a></button>
+                    <button class="btn  btn-outline-danger"><a href="delete/{{ patient.id }}">Delete</a></button>
                 </div>
             </div>
         {% endfor %}
