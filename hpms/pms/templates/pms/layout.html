@@ -12,11 +12,14 @@
     </head>
     <body>
         <nav class="navsec">
-            <ul>
-                <li><a href="#news">All Patients</a></li>
-                <li><a  href="{% url 'add' %}">Add new patient</a></li>
+            <ul>  {% if request.user.is_authenticated %}
+                <li><a href="{% url 'index' %}">All Patients</a></li>
+                <li><a  href="{% url 'add'  %}">Add new patient</a></li>
                 <li><a href="#contact">Messages</a></li>
                 <li><a href="#contact">Appointments</a></li>
+                <li style="float:right"><a href="{% url 'logout' %}">Log Out</a></li>
+                {% endif %}
+                
                 <li style="float:right"><a href="{% url 'index' %}" class="active">PMS</a></li>
               </ul>
               

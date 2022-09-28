@@ -1,7 +1,23 @@
 {% extends "pms/layout.html" %}
 {% load static %}
 {% block body %}
-    
+    {% if request.user.is_authenticated %}
+    <h1>All New Patient</h1>
+    <div class="row mx-3">
+        {% for patient in Patients %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Patient Card</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{patient.fullname}}</h6>
+                    <p class="card-text">{{patient.age}}</p>
+                        <p class="card-text">{{patient.time}}</p>
+                    {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+                    <button class="btn  btn-outline-primary"><a href="{% url 'all' id=patient.id %}" class="card-link">Details</a></button>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% else %}
     <div class="firstDiv">
         <h1 class="h1text">Welcome To Your PMS</h1>
             <p class="niceText">Have a great day or night!</p>
@@ -10,5 +26,5 @@
             <button type="button" class="btn btn-outline-info"><a href="{% url 'login' %}">Login</a></button>
             <button type="button" class="btn btn-outline-secondary"><a href="register">Register</a></button> 
     </div>
-
+    {% endif %}
 {% endblock %}
