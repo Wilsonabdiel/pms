@@ -58,6 +58,15 @@ def delete(request, id):
 
 
 
+def mp(reqquest):
+    currentUser = request.user
+    allPatients = currentUser.user.all().order_by('-time')
+    # listings = currentUser.listingWishlist.all()
+    
+    return render(request, "pms/mp.html",{
+        "Patients":allPatients
+    })       
+
 def messages(request):
     if request.user.is_authenticated:
         return render(request, "pms/messages.html")

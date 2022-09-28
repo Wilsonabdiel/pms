@@ -1,0 +1,21 @@
+{% extends "pms/layout.html" %}
+{% load static %}
+{% block body %}
+<h1>All Your Patient</h1>
+<div class="row mx-3">
+    {% for patient in Patients %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Patient Card</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{patient.fullname}}</h6>
+                <p class="card-text">{{patient.age}}</p>
+                    <p class="card-text">{{patient.time}}</p>
+                    
+                    {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+                <button class="btn  btn-outline-primary"><a href="{% url 'all' id=patient.id %}" class="card-link">Details</a></button>
+                <button class="btn  btn-outline-danger"><a href="delete/{{ patient.id }}">Delete</a></button>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

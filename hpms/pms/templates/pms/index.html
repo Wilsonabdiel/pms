@@ -2,7 +2,7 @@
 {% load static %}
 {% block body %}
     {% if request.user.is_authenticated %}
-    <h1>All New Patient</h1>
+    <h1>All Patient</h1>
     <div class="row mx-3">
         {% for patient in Patients %}
             <div class="card" style="width: 18rem;">
